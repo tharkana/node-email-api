@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/tharkana/node-email-api#readme",
   "dependencies": {
+    "@sendgrid/mail": "^6.5.4",
     "@types/compression": "^1.7.0",
     "@types/cors": "^2.8.6",
     "@types/express": "^4.17.3",
