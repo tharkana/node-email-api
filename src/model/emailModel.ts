@@ -17,7 +17,9 @@ export default class EmailModel {
 
 
     constructor() {
-        this.emailList = [
+        this.emailList = [{ uid: '123', to: 'tharkana.infor@gmail.com', body: "test", subject: "yellow", status: 'SENT' },
+        { uid: '213', to: 'tharkana.infor@gmail.com', body: "test", subject: "yellow", status: 'QUEUED' }
+    
             ];
     }
 

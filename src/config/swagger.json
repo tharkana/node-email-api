@@ -1,0 +1,118 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0"
+  },
+  "host": "localhost:3000",
+  "basePath": "/api/v1",
+  "schemes": [
+    "http"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/email/{id}": {
+      "get": {
+        "tags": [
+          "Get Email details"
+        ],
+        "summary": "Get Email by ID",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "400": {
+            "description": "Bad request"
+          }
+        },
+        "content": {
+          "application/json": {}
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Email id",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Delete Email"
+        ],
+        "summary": "Delete Email",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "404": {
+            "description": "Not found"
+          }
+        },
+        "content": {
+          "application/json": {}
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Email id",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/email": {
+      "post": {
+        "tags": [
+          "Send Email"
+        ],
+        "summary": "Send Email",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad request"
+          }
+        },
+        "content": {
+          "application/json": {}
+        },
+        "parameters": [
+          {
+            "name": "to",
+            "in": "body",
+            "description": "To email address",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "content",
+            "in": "body",
+            "description": "Email content",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "subject",
+            "in": "body",
+            "description": "Email subject",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    }
+  }
+}
